@@ -101,6 +101,8 @@ onShow(() => {
   height: 100%;
   padding: 0 50rpx;
   background: #f2f3f5;
+  display: flex;
+  flex-direction: column;
 
   .building-main_plane_down7 {
     height: 500rpx !important;
@@ -111,9 +113,9 @@ onShow(() => {
     width: 100%;
     height: 180rpx;
     background: #f9fafc;
-    box-shadow:
+    /* box-shadow:
       -16rpx -16rpx 66rpx 2rpx #ffffff,
-      16rpx 16rpx 66rpx 2rpx #dfe0e2;
+      16rpx 16rpx 66rpx 2rpx #dfe0e2; */
     border-radius: 28rpx;
     opacity: 1;
     border: 2rpx solid #ffffff;
@@ -142,6 +144,9 @@ onShow(() => {
   }
 
   .building-main {
+    flex: 1 0 0;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin-top: 52rpx;
 
     .building-main_plane {
@@ -153,9 +158,9 @@ onShow(() => {
       width: 100%;
       height: 108rpx;
       background: #f9fafc;
-      box-shadow:
+      /* box-shadow:
         -16rpx -16rpx 66rpx 2rpx #ffffff,
-        16rpx 16rpx 66rpx 2rpx #dfe0e2;
+        16rpx 16rpx 66rpx 2rpx #dfe0e2; */
       border-radius: 100rpx;
       opacity: 1;
       border: 2rpx solid #ffffff;
@@ -184,9 +189,9 @@ onShow(() => {
 
       .main_item_active {
         background: linear-gradient(180deg, #5c75ff 0%, #3c56e3 100%);
-        box-shadow:
+        /* box-shadow:
           0rpx 4rpx 16rpx 2rpx rgba(70, 96, 236, 0.63),
-          inset 0rpx 6rpx 12rpx 2rpx #3955ef;
+          inset 0rpx 6rpx 12rpx 2rpx #3955ef; */
         border: 2rpx solid #ffffff;
         color: #ffffff;
         font-size: 36rpx;

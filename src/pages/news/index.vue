@@ -167,12 +167,16 @@ const submit = () => {
   margin-left: 48rpx;
 }
 .car-invite-wrapper-main {
-  margin-top: 48px;
+  /* margin-top: 48px; */
   flex: 1 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding-top: 48rpx;
   padding-bottom: 56rpx;
   background: #ffffff;
+
   box-shadow: 0rpx 16rpx 66rpx 2rpx #dfe0e2;
   border-radius: 40rpx 40rpx 0rpx 0rpx;
   opacity: 1;
@@ -232,7 +236,11 @@ const submit = () => {
   }
 
   .main-car-list {
+    flex: 1 0 0;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin-top: 206rpx;
+    margin-bottom: 206rpx;
     padding-left: 52rpx;
     padding-right: 46rpx;
     max-height: 498rpx;

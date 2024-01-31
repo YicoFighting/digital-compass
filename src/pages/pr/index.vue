@@ -98,7 +98,13 @@ onShow(() => {
   background: url('../../static/images/pr/pr-back.png') no-repeat;
   background-size: cover;
   padding: 0 50rpx;
+  display: flex;
+  flex-direction: column;
   .pr-main {
+    flex: 1 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     .img-des {
       width: 302rpx;
       height: 154rpx;
@@ -110,6 +116,9 @@ onShow(() => {
     }
 
     .pr-list {
+      flex: 1 0 0;
+      overflow-x: hidden;
+      overflow-y: auto;
       margin-top: 32rpx;
 
       .pr-list_main {
@@ -118,9 +127,9 @@ onShow(() => {
         height: 264rpx;
 
         background: #f9fafc;
-        box-shadow:
+        /* box-shadow:
           -16rpx -16rpx 66rpx 2rpx #ffffff,
-          16rpx 16rpx 66rpx 2rpx #dfe0e2;
+          16rpx 16rpx 66rpx 2rpx #dfe0e2; */
         border-radius: 28rpx;
         opacity: 1;
         border: 2rpx solid #ffffff;
@@ -137,7 +146,7 @@ onShow(() => {
           margin-left: -26rpx;
           width: 208rpx;
           height: 186rpx;
-          box-shadow: 0rpx 16rpx 32rpx 2rpx #c5cdf1;
+          /* box-shadow: 0rpx 16rpx 32rpx 2rpx #c5cdf1; */
           border-radius: 28rpx;
           opacity: 1;
         }

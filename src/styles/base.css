@@ -43,4 +43,10 @@ image {
 body {
   display: flex;
   justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+iframe {
+  height: 100% !important;
 }

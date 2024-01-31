@@ -8,24 +8,26 @@
             <view>您好，</view>
             <view>罗盘科技欢迎您</view>
           </view>
-          <view class="visitor-record_empty flex-center flex-direction-align">
-            <view></view>
-            <text>您暂无行程</text>
-          </view>
-          <view class="visitor-list">
-            <view class="visitor-fill flex-space-between" @tap="goAboutLuopan">
-              <view class="flex-default">
-                <view class="card-icon"></view>
-                <view class="card-des">关于罗盘</view>
-              </view>
-              <view class="card-right"></view>
+          <view class="scroll">
+            <view class="visitor-record_empty flex-center flex-direction-align">
+              <view></view>
+              <text>您暂无行程</text>
             </view>
-            <view class="visitor-fill flex-space-between" @tap="goGuide">
-              <view class="flex-default">
-                <view class="card-icon"></view>
-                <view class="card-des">拜访指引</view>
+            <view class="visitor-list">
+              <view class="visitor-fill flex-space-between" @tap="goAboutLuopan">
+                <view class="flex-default">
+                  <view class="card-icon"></view>
+                  <view class="card-des">关于罗盘</view>
+                </view>
+                <view class="card-right"></view>
               </view>
-              <view class="card-right"></view>
+              <view class="visitor-fill flex-space-between" @tap="goGuide">
+                <view class="flex-default">
+                  <view class="card-icon"></view>
+                  <view class="card-des">拜访指引</view>
+                </view>
+                <view class="card-right"></view>
+              </view>
             </view>
           </view>
         </view>
@@ -68,8 +70,14 @@ onShow(() => {
   overflow: hidden;
   &-content {
     flex: 1 0 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .scroll {
+      flex: 1 0 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
   }
 }
 .index-top {
@@ -84,13 +92,14 @@ onShow(() => {
 }
 .visitor-record_empty {
   margin: 0 auto;
+  margin-bottom: 64rpx;
   width: 650rpx;
   height: 456rpx;
   background: #f9fafc;
   border-radius: 40rpx;
   opacity: 1;
-  border: 2rpx solid #ffffff;
-  box-shadow: 16rpx 16rpx 66rpx 2rpx #dfe0e2;
+  /* border: 2rpx solid #ffffff; */
+  /* box-shadow: 16rpx 16rpx 66rpx 2rpx #dfe0e2; */
   padding-left: 38rpx;
   padding-right: 42rpx;
 
@@ -121,13 +130,13 @@ onShow(() => {
 .visitor-list {
   .visitor-fill {
     margin: 0 auto;
-    margin-top: 64rpx;
+    margin-bottom: 64rpx;
     width: 651rpx;
     height: 148rpx;
     background: #f9fafc;
-    box-shadow:
+    /* box-shadow:
       -16rpx -16rpx 66rpx 2rpx #ffffff,
-      16rpx 16rpx 66rpx 2rpx #dfe0e2;
+      16rpx 16rpx 66rpx 2rpx #dfe0e2; */
     border-radius: 28rpx;
     opacity: 1;
     border: 2rpx solid #ffffff;
